@@ -1,6 +1,5 @@
 package com.informatorio.RecetarioTPI.projectapp.controller.receta;
 
-import com.informatorio.RecetarioTPI.projectapp.domain.Receta;
 import com.informatorio.RecetarioTPI.projectapp.dto.receta.RecetaDto;
 import com.informatorio.RecetarioTPI.projectapp.service.receta.RecetaService;
 import lombok.RequiredArgsConstructor;
