@@ -31,4 +31,5 @@ public class Ingrediente {
 
     @Column(nullable = false)
     private String nombre;
+
 }
