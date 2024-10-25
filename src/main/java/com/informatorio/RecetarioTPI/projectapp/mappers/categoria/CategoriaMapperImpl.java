@@ -9,7 +9,7 @@ public class CategoriaMapperImpl implements CategoriaMapper {
     @Override
     public Categoria categoriaDtoToCategoria(CategoriaDto categoriaDto) {
         Categoria categoria = new Categoria();
-        categoria.setNombre(categoriaDto.nombre());
+        categoria.setNombre( categoriaDto.nombre() );
         return categoria;
     }
 
