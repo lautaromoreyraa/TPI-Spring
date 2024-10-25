@@ -17,10 +17,6 @@ public class CategoriaServiceImpl implements CategoriaService {
     private final CategoriaRepository categoriaRepository;
     private final CategoriaMapper categoriaMapper;
 
-    public CategoriaServiceImpl(CategoriaRepository categoriaRepository, CategoriaMapper categoriaMapper) {
-        this.categoriaRepository = categoriaRepository;
-        this.categoriaMapper = categoriaMapper;
-    }
 
     @Override
     public CategoriaDto crearCategoria(CategoriaDto categoriaDto) {
@@ -45,14 +41,6 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 
     @Override
-    public List<Categoria> getAllCategorias() {
-        List<Categoria> categorias = categoriaRepository.findAll();
-
-        if ( categorias.isEmpty() ) {
-            throw new NoSuchElementException("No hay categorias disponibles");
-        }else {
-            return categorias;
-        }
     }
 
 }

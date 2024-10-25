@@ -9,5 +9,4 @@ import java.util.UUID;
 public interface CategoriaService {
     CategoriaDto crearCategoria(CategoriaDto categoriaDto);
     Categoria getCategoriaById(UUID categoriaId);
-    List<Categoria> getAllCategorias();
 }
