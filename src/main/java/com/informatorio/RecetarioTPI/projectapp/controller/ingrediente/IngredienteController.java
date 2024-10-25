@@ -25,9 +25,9 @@ public class IngredienteController {
             @RequestParam(required = false, name = "idPaso") UUID idPaso) {
 
         if (idPaso != null) {
-            return ingredienteService.getIngredientesByPaso(idPaso);
+            return ingredienteService.getIngredientesByPaso( idPaso );
         } else {
-            return ingredienteService.getIngredientesByReceta(idReceta);
+            return ingredienteService.getIngredientesByReceta( idReceta );
         }
     }
 }

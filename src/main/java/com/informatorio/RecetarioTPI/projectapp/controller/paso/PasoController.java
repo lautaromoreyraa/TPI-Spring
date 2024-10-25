@@ -22,7 +22,7 @@ public class PasoController {
             @RequestBody PasoActualizadoDto pasoActualizadoDto) {
 
         // Llamo al servicio para actualizar el paso
-        boolean pasoActualizado = pasoService.updatePaso(idPaso, pasoActualizadoDto);
+        boolean pasoActualizado = pasoService.updatePaso( idPaso, pasoActualizadoDto );
 
         // Si la actualización fue exitosa, devuelvo una respuesta adecuada
         if (pasoActualizado) {

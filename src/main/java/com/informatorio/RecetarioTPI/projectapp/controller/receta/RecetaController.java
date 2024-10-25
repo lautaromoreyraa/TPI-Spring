@@ -24,7 +24,7 @@ public class RecetaController {
     @PostMapping()
     public ResponseEntity<?> createReceta(@RequestBody RecetaDto recetaDto) {
         try {
-            RecetaDto nuevaRecetaDto = recetaService.crearReceta(recetaDto);
+            RecetaDto nuevaRecetaDto = recetaService.crearReceta( recetaDto );
             return ResponseEntity.status(HttpStatus.CREATED)
                     .body("Receta " +nuevaRecetaDto.nombre()+ " creada con éxito");
         } catch (NoSuchElementException e) {
@@ -36,7 +36,7 @@ public class RecetaController {
 
     @GetMapping()
     public List<RecetaCreatedDto> getAllRecetas(){
-        return recetaService.getAllRecetas();
+        return recetaService.getAllRecetas( );
     }
 
     @GetMapping("/{idReceta}")
