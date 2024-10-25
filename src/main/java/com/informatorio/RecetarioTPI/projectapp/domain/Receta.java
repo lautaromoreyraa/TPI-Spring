@@ -1,5 +1,6 @@
 package com.informatorio.RecetarioTPI.projectapp.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.informatorio.RecetarioTPI.projectapp.domain.Enum.DificultadEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -45,5 +46,6 @@ public class Receta {
     private Categoria categoria;
 
     @OneToMany(mappedBy = "receta", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+    @JsonManagedReference // serializa los pasos normalmente en la receta
     private List<Paso> pasos;
 }

@@ -1,5 +1,6 @@
 package com.informatorio.RecetarioTPI.projectapp.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +10,6 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -43,10 +43,12 @@ public class Paso {
     // a un paso especifico en la base de datos,
     // pero sin que el objeto Ingrediente tenga que almacenar esa relación.
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "paso_id")
+    @JoinColumn(name = "ingrediente_id")
     private List<Ingrediente> ingredientes;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "receta_id")
+    @JsonBackReference
     private Receta receta;
+
 }
