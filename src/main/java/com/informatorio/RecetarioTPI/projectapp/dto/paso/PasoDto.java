@@ -9,4 +9,4 @@ public record PasoDto (
         String descripcion,
         int tiempoEstimado,
         boolean esOpcional,
-        List<Ingrediente> ingredientes) {}
+        List<Ingrediente> ingredientes) { }

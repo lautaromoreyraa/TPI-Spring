@@ -10,4 +10,4 @@ public record RecetasByCategoriaDto(
         String nombre,
         DificultadEnum dificultad,
         String descripcion,
-        int tiempoPreparacion) { }
+        int tiempoPreparacion) {}

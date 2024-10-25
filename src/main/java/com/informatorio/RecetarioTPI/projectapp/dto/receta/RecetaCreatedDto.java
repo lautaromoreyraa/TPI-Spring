@@ -13,4 +13,4 @@ public record RecetaCreatedDto(
         DificultadEnum dificultad,
         int tiempoPreparacion, // Este campo debe ser mutable
         UUID categoriaID,
-        List<Paso> pasos) { }
+        List<Paso> pasos) {}

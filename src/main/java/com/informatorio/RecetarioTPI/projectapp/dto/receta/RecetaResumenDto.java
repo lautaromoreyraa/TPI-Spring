@@ -4,4 +4,4 @@ import java.util.UUID;
 
 public record RecetaResumenDto (
         UUID id,
-        String nombre) { }
+        String nombre) {}

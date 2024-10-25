@@ -8,5 +8,4 @@ import java.util.UUID;
 public record CategoriaByNombreDto(
         UUID id,
         String nombre,
-        List<RecetasByCategoriaDto> recetas
-) { }
+        List<RecetasByCategoriaDto> recetas) { }
